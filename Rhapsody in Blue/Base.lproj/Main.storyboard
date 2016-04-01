@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rhapsody_in_Blue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +19,124 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnf-yi-mob">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Rhapsody in Blue - George Gershwin" id="ahk-dH-dWZ"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-wd-LK4">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="UOt-AO-8FO">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="btJ-gV-WAa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="APq-wB-X7k"/>
+                                    <barButtonItem systemItem="play" id="tjt-r3-eEa">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="OWK-ao-Pcc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iJV-9C-MGe"/>
+                                    <barButtonItem systemItem="stop" id="gmX-3j-sV3">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="VjG-xw-bfg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="George_Gershwin-signed.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mfy-o9-6Ge">
+                                <rect key="frame" x="193" y="166" width="214" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="09C-zz-5ei"/>
+                                    <constraint firstAttribute="width" constant="214" id="56o-TQ-ogg"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GOF-ie-JvC">
+                                <rect key="frame" x="52" y="513" width="497" height="31"/>
+                                <connections>
+                                    <action selector="changeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="pWE-Qk-DFB"/>
+                                </connections>
+                            </slider>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Sound.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gzu-Tf-vLr">
+                                <rect key="frame" x="555" y="501" width="45" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="8iz-X3-Mv7"/>
+                                    <constraint firstAttribute="width" constant="45" id="9Tw-DV-TRz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Speaker.png" translatesAutoresizingMaskIntoConstraints="NO" id="sAf-yc-vaV">
+                                <rect key="frame" x="0.0" y="507" width="41" height="41"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-Rg-xTW">
+                                <rect key="frame" x="112" y="107" width="376" height="31"/>
+                                <connections>
+                                    <action selector="changeProgress:" destination="BYZ-38-t0r" eventType="valueChanged" id="caF-FN-KqP"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuI-tt-qdZ">
+                                <rect key="frame" x="494" y="109" width="80" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usn-8Y-MIk">
+                                <rect key="frame" x="20" y="109" width="86" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Usn-8Y-MIk" firstAttribute="centerY" secondItem="NNW-Rg-xTW" secondAttribute="centerY" id="0FG-2N-bGf"/>
+                            <constraint firstItem="NNW-Rg-xTW" firstAttribute="leading" secondItem="GOF-ie-JvC" secondAttribute="leading" constant="60" id="13A-Ls-wkv"/>
+                            <constraint firstItem="NNW-Rg-xTW" firstAttribute="top" secondItem="gnf-yi-mob" secondAttribute="bottom" constant="35" id="2BQ-xD-HVl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HuI-tt-qdZ" secondAttribute="trailing" constant="6" id="2mq-zI-him"/>
+                            <constraint firstItem="GOF-ie-JvC" firstAttribute="leading" secondItem="sAf-yc-vaV" secondAttribute="trailing" constant="13" id="38i-eN-CAg"/>
+                            <constraint firstItem="Usn-8Y-MIk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5M9-v9-aPm"/>
+                            <constraint firstItem="mfy-o9-6Ge" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BqH-eR-mCF"/>
+                            <constraint firstItem="Gzu-Tf-vLr" firstAttribute="trailing" secondItem="Acw-wd-LK4" secondAttribute="trailing" id="CZO-GF-9yk"/>
+                            <constraint firstItem="GOF-ie-JvC" firstAttribute="centerY" secondItem="Gzu-Tf-vLr" secondAttribute="centerY" id="Eei-IZ-VXA"/>
+                            <constraint firstItem="NNW-Rg-xTW" firstAttribute="trailing" secondItem="GOF-ie-JvC" secondAttribute="trailing" constant="-61" id="H26-Xu-jDc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Acw-wd-LK4" secondAttribute="bottom" id="P0I-oN-jLn"/>
+                            <constraint firstItem="Usn-8Y-MIk" firstAttribute="firstBaseline" secondItem="HuI-tt-qdZ" secondAttribute="baseline" constant="-5" id="cQ6-a0-2xZ"/>
+                            <constraint firstItem="Acw-wd-LK4" firstAttribute="top" secondItem="sAf-yc-vaV" secondAttribute="bottom" constant="8" id="cuG-d7-Cuw"/>
+                            <constraint firstItem="Acw-wd-LK4" firstAttribute="top" secondItem="Gzu-Tf-vLr" secondAttribute="bottom" constant="2" id="dRr-Lv-Ge5"/>
+                            <constraint firstItem="Acw-wd-LK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="e2A-A4-DdA"/>
+                            <constraint firstItem="gnf-yi-mob" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="f7x-Po-WKC"/>
+                            <constraint firstItem="HuI-tt-qdZ" firstAttribute="leading" secondItem="NNW-Rg-xTW" secondAttribute="trailing" constant="8" id="go1-7b-kic"/>
+                            <constraint firstItem="GOF-ie-JvC" firstAttribute="centerX" secondItem="Acw-wd-LK4" secondAttribute="centerX" id="iNQ-re-SFy"/>
+                            <constraint firstItem="mfy-o9-6Ge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iz6-jY-XYb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gnf-yi-mob" secondAttribute="trailing" constant="-20" id="mLN-tC-cGq"/>
+                            <constraint firstItem="sAf-yc-vaV" firstAttribute="centerY" secondItem="GOF-ie-JvC" secondAttribute="centerY" id="mwq-kS-gJ4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Acw-wd-LK4" secondAttribute="trailing" constant="-20" id="nTE-FU-nWv"/>
+                            <constraint firstItem="Gzu-Tf-vLr" firstAttribute="leading" secondItem="GOF-ie-JvC" secondAttribute="trailing" constant="8" symbolic="YES" id="pTI-40-Ndv"/>
+                            <constraint firstItem="NNW-Rg-xTW" firstAttribute="leading" secondItem="Usn-8Y-MIk" secondAttribute="trailing" constant="8" id="xnv-Lm-AHE"/>
+                            <constraint firstItem="Usn-8Y-MIk" firstAttribute="baseline" secondItem="HuI-tt-qdZ" secondAttribute="baseline" id="xyx-PG-7ZL"/>
+                            <constraint firstItem="Usn-8Y-MIk" firstAttribute="baseline" secondItem="HuI-tt-qdZ" secondAttribute="firstBaseline" constant="5" id="yAX-Eb-JT6"/>
+                            <constraint firstItem="gnf-yi-mob" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="z91-XJ-er9"/>
+                            <constraint firstItem="sAf-yc-vaV" firstAttribute="leading" secondItem="Acw-wd-LK4" secondAttribute="leading" id="zIC-Sp-lxN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="Usn-8Y-MIk" id="D6T-cO-3Tc"/>
+                        <outlet property="durationLabel" destination="HuI-tt-qdZ" id="qtf-1G-nCe"/>
+                        <outlet property="progressSlider" destination="NNW-Rg-xTW" id="2CD-vl-TQn"/>
+                        <outlet property="volumeSlider" destination="GOF-ie-JvC" id="1hv-KJ-8Td"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="George_Gershwin-signed.jpg" width="629" height="781"/>
+        <image name="Sound.png" width="128" height="128"/>
+        <image name="Speaker.png" width="128" height="128"/>
+    </resources>
 </document>

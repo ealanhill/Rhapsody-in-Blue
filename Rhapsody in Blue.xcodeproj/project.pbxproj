@@ -12,6 +12,10 @@
 		F5300D671CAD53AE00D39FE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5300D651CAD53AE00D39FE8 /* Main.storyboard */; };
 		F5300D691CAD53AE00D39FE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5300D681CAD53AE00D39FE8 /* Assets.xcassets */; };
 		F5300D6C1CAD53AE00D39FE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5300D6A1CAD53AE00D39FE8 /* LaunchScreen.storyboard */; };
+		F5300D741CAD53EA00D39FE8 /* gershwin-rhapsodyinblue-bertoli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5300D731CAD53EA00D39FE8 /* gershwin-rhapsodyinblue-bertoli.mp3 */; };
+		F5300D761CAD555800D39FE8 /* George_Gershwin-signed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5300D751CAD555800D39FE8 /* George_Gershwin-signed.jpg */; };
+		F5300D791CAD5ECF00D39FE8 /* Sound.png in Resources */ = {isa = PBXBuildFile; fileRef = F5300D771CAD5ECF00D39FE8 /* Sound.png */; };
+		F5300D7A1CAD5ECF00D39FE8 /* Speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = F5300D781CAD5ECF00D39FE8 /* Speaker.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F5300D681CAD53AE00D39FE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5300D6B1CAD53AE00D39FE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5300D6D1CAD53AE00D39FE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5300D731CAD53EA00D39FE8 /* gershwin-rhapsodyinblue-bertoli.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "gershwin-rhapsodyinblue-bertoli.mp3"; path = "../../../../../Music/gershwin-rhapsodyinblue-bertoli.mp3"; sourceTree = "<group>"; };
+		F5300D751CAD555800D39FE8 /* George_Gershwin-signed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "George_Gershwin-signed.jpg"; path = "../../../../../Pictures/George_Gershwin-signed.jpg"; sourceTree = "<group>"; };
+		F5300D771CAD5ECF00D39FE8 /* Sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sound.png; path = ../../../../../Pictures/Sound.png; sourceTree = "<group>"; };
+		F5300D781CAD5ECF00D39FE8 /* Speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Speaker.png; path = ../../../../../Pictures/Speaker.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				F5300D681CAD53AE00D39FE8 /* Assets.xcassets */,
 				F5300D6A1CAD53AE00D39FE8 /* LaunchScreen.storyboard */,
 				F5300D6D1CAD53AE00D39FE8 /* Info.plist */,
+				F5300D731CAD53EA00D39FE8 /* gershwin-rhapsodyinblue-bertoli.mp3 */,
+				F5300D751CAD555800D39FE8 /* George_Gershwin-signed.jpg */,
+				F5300D771CAD5ECF00D39FE8 /* Sound.png */,
+				F5300D781CAD5ECF00D39FE8 /* Speaker.png */,
 			);
 			path = "Rhapsody in Blue";
 			sourceTree = "<group>";
@@ -122,9 +134,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5300D7A1CAD5ECF00D39FE8 /* Speaker.png in Resources */,
+				F5300D761CAD555800D39FE8 /* George_Gershwin-signed.jpg in Resources */,
+				F5300D741CAD53EA00D39FE8 /* gershwin-rhapsodyinblue-bertoli.mp3 in Resources */,
 				F5300D6C1CAD53AE00D39FE8 /* LaunchScreen.storyboard in Resources */,
 				F5300D691CAD53AE00D39FE8 /* Assets.xcassets in Resources */,
 				F5300D671CAD53AE00D39FE8 /* Main.storyboard in Resources */,
+				F5300D791CAD5ECF00D39FE8 /* Sound.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
